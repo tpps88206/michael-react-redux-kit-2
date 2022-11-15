@@ -1,25 +1,19 @@
-import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { lazy } from 'react';
 
-import NotFound from '../components/NotFound';
-import Progress from '../components/Progress';
+import Loadable from '../components/Loadable';
+import MainLayout from '../layouts/Main.layout';
 
-const MainPage = lazy(() => import('../pages/MainPage'));
+const MainPage = Loadable(lazy(() => import('../pages/Main.page')));
 
-const MainRouter = () => {
-  return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Suspense fallback={<Progress />}>
-            <MainPage />
-          </Suspense>
-        }
-      />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
+const MainRouter = {
+  path: '/',
+  element: <MainLayout />,
+  children: [
+    {
+      path: '/',
+      element: <MainPage />,
+    },
+  ],
 };
 
 export default MainRouter;

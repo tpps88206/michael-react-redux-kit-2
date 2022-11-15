@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { HistoryRouter } from 'redux-first-history/rr6';
 
 import ErrorBoundary from './components/ErrorBoundary';
-import MainRoute from './routes/MainRoute';
+import Router from './routes';
 import configureStore, { createReduxHistory } from './stores/configureStore';
 
 const store = configureStore();
@@ -14,7 +14,7 @@ const APP = () => {
     <Provider store={store}>
       <ErrorBoundary>
         <HistoryRouter history={history}>
-          <MainRoute />
+          <Router />
         </HistoryRouter>
       </ErrorBoundary>
     </Provider>

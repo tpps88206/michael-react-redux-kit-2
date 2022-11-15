@@ -33,7 +33,12 @@
 - 作為 API 和處理資料的地方
 - 命名規則：大寫開頭的駝峰式 + `page.js` 結尾
 
+#### src/layouts
 
+- 作為 page 的外層 layout
+- 設定如 header 或 drawer 等元素
+- 命名規則：大寫開頭的駝峰式 + `layout.js` 結尾
+- 
 #### src/hooks
 
 - 集中所有客製化 React Hooks
