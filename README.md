@@ -16,6 +16,7 @@
 - Style Component
 - Eslint
 - Prettier
+- FontAwesome
 
 ### 目錄結構
 
@@ -74,3 +75,9 @@
 #### src/assets
 
 - 儲存靜態檔案
+
+### Guide
+
+#### Icon
+
+https://fontawesome.com/docs/web/use-with/react/add-icons#add-the-icons-to-your-project
